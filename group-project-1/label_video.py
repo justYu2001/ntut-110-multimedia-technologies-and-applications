@@ -4,18 +4,18 @@ import glob
 import random
 
 data_path = 'frames'
-input_video_filename = 'helmet1.mp4'
+input_video_filename = 'helmet\helmet1.mp4'
 output_video_filename = 'output.mp4'
 
 output_video_fps = 10
-fourcc = cv2.VideoWriter_fourcc(*'MP4V')
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 
 cap = cv2.VideoCapture(input_video_filename)
 video_width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 video_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))  
 cap.release()
 
-out_vid = cv2.VideoWriter(output_video_filename, fourcc, output_video_fps, (1280,  720))
+out_vid = cv2.VideoWriter(output_video_filename, fourcc, output_video_fps, (video_width,  video_height))
 
 classes = open(f'{data_path}/classes.txt.').read().strip().split()
 random.seed(0)
@@ -39,9 +39,10 @@ for label_filename in label_files:
 
         cv2.rectangle(image, (x1, y1), (x2, y2), colors[int(element[0])], thickness=2, lineType=cv2.LINE_AA)
         cv2.putText(image, classes[int(element[0])], (x1, y1), 0, 1, [225, 255, 255], thickness=2, lineType=cv2.LINE_AA)
+        # cv2.imshow(image_name,image)
         out_vid.write(image)
 
-cv2.imshow(image_name,image)
+        
 out_vid.release()
 cv2.waitKey(0)
 cv2.destroyAllWindows()

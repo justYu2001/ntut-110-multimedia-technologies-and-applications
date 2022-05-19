@@ -8,7 +8,7 @@ else:
     raise Exception('path \'frames\' already exsists, please delete to continue')
 
 video_file = 'helmet\helmet1.mp4'
-capture_fps = 30
+capture_fps = 10
 cap = cv2.VideoCapture(video_file)
 fps = cap.get(cv2.CAP_PROP_FPS)
 print(fps)
