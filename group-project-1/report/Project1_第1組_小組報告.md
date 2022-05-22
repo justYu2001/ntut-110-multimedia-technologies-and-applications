@@ -22,5 +22,5 @@
 
 ## 程式執行的結果
 
-- [txt 和 jpg 檔案連結](https://drive.google.com/drive/folders/11e8YmwBzLPeSzMajyIiXrHpdx3DWTvOk?usp=sharing)
+- [txt 和 jpg 檔案連結（如果簡報的連結有問題請點 Youtube 影片說明欄裡的連結）](https://drive.google.com/drive/folders/11e8YmwBzLPeSzMajyIiXrHpdx3DWTvOk?usp=sharing)
 - [Youtube 影片連結](https://youtu.be/4fnYtjRzzwA)
