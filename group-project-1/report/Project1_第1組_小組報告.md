@@ -10,7 +10,10 @@
 ## 執行程式遇到的困難
 
 1.檔案中讀取路徑的部分沒有寫好。
+解法:將程式碼中有關路徑的部分都檢查，並更正。
+
 2.在label_video.py中讀取LabelImg的時候，沒有將文字處理好，導致出現helmet標示為soup的錯誤。
+解法:更改classes.txt中的內容，比如onion soup改為onion_soup。
 
 ## 選擇使用的資料集類別和影片
 
